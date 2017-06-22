@@ -1,26 +1,26 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>User Signup</h1>
-    <form action="/sign-up" method='POST'>
 
-    
+    <h1>User Signup</h1>
+    <form action='' method='POST'>
+
        <table>
            <tr>
             <td><label> Username:</label></td>
             <td><input name='username' type='text' value='{{request.form['username']}}' /><span class=error>{{user_error}}</span></td>
             </tr>
-            
-            
+
+
             <tr> 
            <td> <label> Password:</label></td>
-            <td><input name='password' type='password' value='{{password}}' /><span class=error>{{password_error}}</span></td>
+            <td><input name='password' type='password' /><span class=error>{{password_error}}</span></td>
             </tr>
 
             
             <tr>
             <td><label> Verify Password:</label></td>
-           <td> <input name='verify' type='password' value='{{verify}}' /><span class=error>{{verify_error}}</span></td>
+           <td> <input name='verify' type='password' /><span class=error>{{verify_error}}</span></td>
            </tr>
             
             <tr>
@@ -30,11 +30,6 @@
        </table> 
         <input type='submit' value="Sign in" /> 
 
-
-
-            
-
-
     </form>
 
-    {% endblock %}
+{% endblock %}
